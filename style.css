@@ -1,0 +1,91 @@
+body {
+  margin: 100px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+
+  overflow: hidden;
+
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  width: 90vw;
+}
+
+.panel {
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center;
+  height: 80vh;
+  border-radius: 50px;
+  color: #eee;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: flex 0.5s ease-in;
+}
+
+.panel > h3 {
+  position: absolute;
+  bottom: 20px;
+  font-size: 30px;
+  left: 20px;
+  border-radius: 20px;
+  background-color: rgb(73, 14, 14);
+  padding: 0.3em;
+  margin: 0;
+  opacity: 0;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(3),
+  .panel:nth-of-type(5),
+  .panel:nth-of-type(6) {
+    display: none;
+  }
+}
+
+.austria {
+  background-image: url(img/1\ Austria_Lake_Mountains_Plansee_Moss_600941_1280x632.jpg);
+}
+
+.usa {
+  background-image: url(img/2\ Canada_Lake_Parks_Mountains_Forests_Scenery_601066_1280x888.jpg);
+}
+
+.russia {
+  background-image: url(img/3\ Lake_Coast_Forests_Mountains_Russia_Lake_Baikal_601047_1280x854.jpg);
+}
+
+.germany {
+  background-image: url(img/4\ Norway_Mountains_Houses_Summer_601155_1280x790.jpg);
+}
+
+.france {
+  background-image: url(img/5\ france.jpg);
+}
+
+.uae {
+  background-image: url(img/6\ Sunrises_and_sunsets_Poppies_Bridges_Grass_Stream_601166_1280x788.jpg);
+}
